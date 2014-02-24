@@ -1,2 +1,2 @@
 def rotate_left3(nums):
-    return [nums[1], nums[2], nums[0]]
+    return [nums[(i + 1) if (i + 1 < len(nums)) else 0] for i in range(len(nums))]
