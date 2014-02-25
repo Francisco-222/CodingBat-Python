@@ -1,12 +1,4 @@
 def sum13(nums):
-    after_13 = False
-    sum = 0
-    for n in nums:
-        if n == 13:
-           after_13 = True
-        elif after_13:
-           after_13 = False
-        else:
-           sum += n
-
-    return sum
+    nums.insert(0, 0)
+    
+    return sum(0 if nums[i - 1] == 13 or n == 13 else n for i, n in enumerate(nums))
